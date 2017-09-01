@@ -1,5 +1,10 @@
 import sys
 
+import os
+d=os.path.dirname( __file__)
+if d not in sys.path:
+    sys.path.append(d)
+
 try:
     from setuptools import Command, setup
 except ImportError:
